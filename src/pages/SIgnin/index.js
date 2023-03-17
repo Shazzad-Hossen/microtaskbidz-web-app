@@ -14,8 +14,7 @@ const Signin = () => {
 
    <form>
 
-       <label className='text-xl font-semibold' htmlFor="name">Name</label>  <br />
-       <input className='border-5 w-[100%] h-12 my-2 rounded-lg' type="text" name="name" id="name" />
+       
 
        <label className='text-xl font-semibold' htmlFor="email">Email</label>  <br />
        <input className='border-5 w-[100%] h-12 my-2 rounded-lg' type="email" name="email" id="email" />
@@ -23,17 +22,15 @@ const Signin = () => {
        <label className='text-xl font-semibold' htmlFor="password">Password</label>  <br />
        <input className='border-5 w-[100%] h-12 my-2 rounded-lg' type="password" name="pass" id="pass" />
 
-       <label className='text-xl font-semibold' htmlFor="ConfirmPassword">Confirm Password</label>  <br />
-       <input className='border-5 w-[100%] h-12 my-2 rounded-lg' type="password" name="confPass" id="confPass" />
-       <br />
+       
        <a className='text-[#028090]' href="/">Forgot password?</a>
 
        <br /> <br />
 
-       <ButtonPrimary text="Sign up"></ButtonPrimary>
+       <ButtonPrimary text="Sign In"></ButtonPrimary>
        <br /><br />
 
-       <p>Already have an account ? <a className='text-[#028090]' href="/">Sign In here</a></p>
+       <p>Create a new account ? <a className='text-[#028090]' href="/">Sign up now</a></p>
 
 
    </form>
