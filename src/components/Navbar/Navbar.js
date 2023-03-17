@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className=" max-w-7xl mx-auto flex justify-between items-center px-">
+            <div className=" max-w-7xl mx-auto flex justify-between items-center mb-40">
             <img src={logo} alt="" />
             <div className=" hidden md:block">
             <ul className='flex gap-10 text-white font-semibold'>
