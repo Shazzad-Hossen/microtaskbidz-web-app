@@ -31,7 +31,7 @@ const Signup = () => {
                 <ButtonPrimary text="Sign up"></ButtonPrimary>
                 <br /><br />
 
-                <p>Already have an account ? <a className='text-[#028090]' href="/">Sign In here</a></p>
+                <p>Already have an account ? <a className='text-[#028090]' href="/user/signin">Sign In here</a></p>
 
 
             </form>
