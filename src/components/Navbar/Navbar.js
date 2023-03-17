@@ -25,8 +25,8 @@ const Navbar = () => {
                 <li><a href="/about">About</a></li>
                 <li><a href="/portfolio">Portfolio</a></li>
                 <li><a href="/clients">Clients</a></li>
-                <li><a href="/Signup">Sign Up</a></li>
-                <li><a href="/Signin">Sign In</a></li>
+                <li><a href="/user">Sign Up</a></li>
+                <li><a href="/user/signin">Sign In</a></li>
             </ul>
             </div>
             <button className='md:hidden' onClick={menuHandler}>
