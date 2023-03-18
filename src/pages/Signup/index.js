@@ -10,7 +10,7 @@ const Signup = () => {
         {" "}
       </Header>
       <main>
-        <div className=" mx-auto my-6 max-w-3xl  rounded-xl bg-formbg">
+        <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">
           <div className="bg-[#fff]   bg-opacity-80 p-10">
             <form>
               <label className="text-xl font-semibold" htmlFor="name">
