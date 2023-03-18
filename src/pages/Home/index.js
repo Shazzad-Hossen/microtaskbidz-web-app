@@ -112,8 +112,8 @@ const Home = () => {
 
         {/* Our Articles */}
         <div className="mx-auto mt-[100px] mb-10 flex max-w-[1248px] flex-col items-center  justify-between gap-6 md:flex-row md:items-start">
-          <div className="bg-article-1 flex h-[391px] flex-col justify-end bg-article1 p-6 text-2xl font-bold text-white">
-            <p>
+          <div className="bg-article-1 flex h-[391px] flex-col justify-end bg-article1 p-6 ">
+            <p className="text-2xl font-bold text-white">
               THE IMAGINE INTERIORS <br /> GUIDE TO INTERIOR DESIGN{" "}
             </p>{" "}
             <br />
@@ -130,8 +130,8 @@ const Home = () => {
               Our Articles
             </h1>
 
-            <div className="bg-article-2 flex h-[391px] flex-col justify-end bg-article2 p-6 text-2xl font-bold text-[#333333] ">
-              <p>
+            <div className="bg-article-2 flex h-[391px] flex-col justify-end bg-article2 p-6  text-[#333333] ">
+              <p className="text-2xl font-bold">
                 THE IMAGINE INTERIORS <br /> GUIDE TO INTERIOR DESIGN{" "}
               </p>{" "}
               <br />
@@ -142,8 +142,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-article-3 flex h-[391px] flex-col justify-end bg-article3 p-6 text-2xl font-bold text-white ">
-            <p>
+          <div className="bg-article-3 flex h-[391px] flex-col justify-end bg-article3 p-6 ">
+            <p className="text-2xl font-bold text-white ">
               THE IMAGINE INTERIORS <br /> GUIDE TO INTERIOR DESIGN{" "}
             </p>{" "}
             <br />

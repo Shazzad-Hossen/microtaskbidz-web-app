@@ -5,7 +5,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 const ButtonBlack = ({ text }) => {
   return (
     <div>
-      <button className="bg-[#333333] py-3 px-4 font-semibold">
+      <button className="bg-[#333333] py-3 px-4 font-semibold text-white">
         {" "}
         <FontAwesomeIcon icon={faPlus} />
         &nbsp;&nbsp;&nbsp;{text}
