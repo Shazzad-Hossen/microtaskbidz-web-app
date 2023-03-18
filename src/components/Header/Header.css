@@ -1,8 +1,5 @@
-
 .header-container {
-    padding: 20px 10px;
-    background-image: url(../../images/Bitmap.png) ,url(../../images/Rectangle.png) ;
-    
-    background-blend-mode:soft-light;
-    background-size: cover;
+  padding: 20px 10px;
+  background-image: url(../../images/Bitmap.png);
+  background-size: cover;
 }

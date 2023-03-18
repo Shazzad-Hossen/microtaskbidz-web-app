@@ -24,7 +24,7 @@ const Home = () => {
         {/* Awesome Clients */}
         <div className="bg-[#333333] py-[66px]">
           <div className="mx-auto max-w-[1248px]">
-            <div className="flex   justify-between">
+            <div className="flex   flex-col  justify-between gap-6 md:flex-row">
               <div className="">
                 <p className="font-semibold text-white ">Client Reviews</p>
                 <br />
@@ -32,14 +32,14 @@ const Home = () => {
                   Awesome Clients <br /> Satisfaction to <br /> about us
                 </p>
               </div>
-              <div className="ml-[25px] h-[90px] bg-[#272727] p-4">
+              <div className="ml-[25px]  h-[90px] w-[90px] bg-[#272727] p-4">
                 <FontAwesomeIcon
                   className="text-[60px] text-[#028090]"
                   icon={faQuoteLeft}
                 />
               </div>
 
-              <div className="max-w-[610px]  bg-[#028090] p-[73px]">
+              <div className=" mx-auto max-w-[610px]  bg-[#028090] p-[73px]">
                 <FontAwesomeIcon
                   className="mr-3 text-[#FFC600]"
                   icon={faStar}
@@ -91,19 +91,19 @@ const Home = () => {
               </div>
             </div>
 
-            <div className=" mt-[66px] flex  justify-between">
-              <div className="flex h-[160px] w-[290px] items-center justify-center bg-[#272727]">
+            <div className=" mt-[66px] flex  grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
+              <div className=" mx-auto flex h-[140px] w-[242px] items-center justify-center bg-[#272727]">
                 <img src={client1} alt="" />
               </div>
-              <div className="flex h-[160px] w-[290px] items-center justify-center bg-[#272727]">
+              <div className=" mx-auto flex h-[140px] w-[242px] items-center justify-center bg-[#272727]">
                 <img src={client2} alt="" />
               </div>
 
-              <div className="flex h-[160px] w-[290px] items-center justify-center bg-[#272727]">
+              <div className=" mx-auto flex h-[140px] w-[242px] items-center justify-center bg-[#272727]">
                 <img src={client3} alt="" />
               </div>
 
-              <div className="flex h-[160px] w-[290px] items-center justify-center bg-[#272727]">
+              <div className=" mx-auto flex h-[140px] w-[242px] items-center justify-center bg-[#272727]">
                 <img src={client4} alt="" />
               </div>
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
         </div>
 
         {/* Our Articles */}
-        <div className="mx-auto mt-[100px] flex max-w-[1248px] flex-col items-start justify-between  md:flex-row">
+        <div className="mx-auto mt-[100px] mb-10 flex max-w-[1248px] flex-col items-center  justify-between gap-6 md:flex-row md:items-start">
           <div className="bg-article-1 flex h-[391px] flex-col justify-end bg-article1 p-6 text-2xl font-bold text-white">
             <p>
               THE IMAGINE INTERIORS <br /> GUIDE TO INTERIOR DESIGN{" "}
