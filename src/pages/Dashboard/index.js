@@ -9,9 +9,7 @@ import Personalinfo from "../../components/Personalinfo/Personalinfo";
 const Dashboard = () => {
   return (
     <div>
-      <Header text="Dashboard" isShow="true">
-        {" "}
-      </Header>
+      <Header text="Dashboard" isShow="true"></Header>
       <main>
         <div className="flex">
           {/* sidebar */}

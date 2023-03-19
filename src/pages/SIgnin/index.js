@@ -11,6 +11,7 @@ const Signin = () => {
       </Header>
 
       <main>
+        <br /> <br /> <br />
         <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">
           <div className="bg-[#fff]   bg-opacity-80 p-10">
             <form>
@@ -50,6 +51,7 @@ const Signin = () => {
             </form>
           </div>
         </div>
+        <br /> <br /> <br />
       </main>
 
       <Footer></Footer>
