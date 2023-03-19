@@ -6,9 +6,7 @@ import Header from "../../components/Header/Header";
 const ResetPassword = () => {
   return (
     <div>
-      <Header text="Reset Password" isShow="true">
-        {" "}
-      </Header>
+      <Header text="Reset Password" isShow="true"></Header>
 
       <main>
         <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">

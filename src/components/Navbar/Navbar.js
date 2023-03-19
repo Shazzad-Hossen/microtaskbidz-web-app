@@ -19,19 +19,19 @@ const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
+              <a href="/user/dashboard">Dashboard</a>
+            </li>
+            <li>
+              <a href="/bidz">Bidz</a>
+            </li>
+            <li>
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="/clients">Clients</a>
+              <a href="/user/signin">Sign In</a>
             </li>
             <li>
               <a href="/user">Sign Up</a>
-            </li>
-            <li>
-              <a href="/user/signin">Sign In</a>
             </li>
           </ul>
         </div>
@@ -42,22 +42,22 @@ const Navbar = () => {
       {menu && (
         <ul className="flex flex-col items-center justify-center gap-10 text-2xl font-semibold text-white">
           <li>
-            <a href="/home">Home</a>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/user/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/bidz">Bidz</a>
           </li>
           <li>
             <a href="/about">About</a>
           </li>
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <a href="/user/signin">Sign In</a>
           </li>
           <li>
-            <a href="/clients">Clients</a>
-          </li>
-          <li>
-            <a href="/articles">Articles</a>
-          </li>
-          <li>
-            <a href="/contact">Contact Us</a>
+            <a href="/user">Sign Up</a>
           </li>
         </ul>
       )}
