@@ -1,5 +1,23 @@
 .footer-container {
-    background: #333333;
-    padding-top:80px;
-    padding-bottom: 153px;
+  background: #333333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#rotate {
+  transform: rotate(180deg);
+}
+
+.showContent {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1s ease-in;
+}
+.showContent.active {
+  max-height: 100vh;
+}
+#svgArrow.active {
+  transform: rotate(180deg);
+}
+#svgArrow {
+  transition: transform 0.5s ease-in;
 }

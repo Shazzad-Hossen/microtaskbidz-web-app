@@ -15,7 +15,7 @@ const Header = ({ text, isShow }) => {
         </div>
       )}
       {!isShow && (
-        <div className="flex flex-col-reverse items-center justify-center justify-center  gap-10 text-white lg:flex-row">
+        <div className="flex flex-col-reverse items-center justify-center  gap-10 text-white lg:flex-row">
           <div className="border-4  p-8">
             <h1 className="text-4xl font-bold">
               BID OR HIRE AT A TIME <br />
