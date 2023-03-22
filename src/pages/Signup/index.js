@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import Spinner from "../../components/Spinner/Spinner";
 import { signupUser } from "../../services/signup/signupSlice";
 
 const Signup = () => {
@@ -13,7 +14,7 @@ const Signup = () => {
   const [confpass, setConfpass] = useState("");
   const body = { name, email, password };
   const dispatch = useDispatch();
-  const { isSignedUp } = useSelector((state) => state.signup);
+  const { isLoading, isSignedUp } = useSelector((state) => state.signup);
 
   useEffect(() => {
     if (isSignedUp) window.location.href = "./user/signin";
@@ -24,6 +25,7 @@ const Signup = () => {
       <Header text="Sign Up" isShow="true">
         {" "}
       </Header>
+      {isLoading && <Spinner></Spinner>}
 
       <main>
         <br /> <br /> <br />
