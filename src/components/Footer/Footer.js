@@ -28,8 +28,8 @@ const Footer = () => {
             <path
               d="M3 3L21 21L39 3"
               stroke="white"
-              stroke-width="7"
-              stroke-linecap="round"
+              strokeWidth="7"
+              strokeLinecap="round"
             />
           </svg>
         </span>

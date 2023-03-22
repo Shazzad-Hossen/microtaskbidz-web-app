@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./state/store";
+import { store } from "./services/store";
 
 import "./styles/global.scss";
 
