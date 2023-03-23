@@ -17,8 +17,14 @@ export const signinUser = createAsyncThunk(
 );
 
 export const signinSlice = createSlice({
-  name: "signup",
+  name: "signin",
   initialState,
+
+  reducers: {
+    signout: (state) => {
+      state.isSignedIn = false;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(signinUser.pending, (state) => {
       state.isLoading = true;
@@ -36,5 +42,6 @@ export const signinSlice = createSlice({
     });
   },
 });
+export const { signout } = signinSlice.actions;
 
 export default signinSlice.reducer;

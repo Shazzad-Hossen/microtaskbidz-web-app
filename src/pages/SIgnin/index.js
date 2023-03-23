@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import Footer from "../../components/Footer/Footer";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
 import Spinner from "../../components/Spinner/Spinner";
-import Header from "../../components/Header/Header";
+
 import { signinUser } from "../../services/signin/signinSlice";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { signin } from "../../services/navtext/navtextSlice";
 
 const Signin = () => {
@@ -13,7 +13,7 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const body = { email, password };
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.signin);
+  const { isLoading, isSignedIn } = useSelector((state) => state.signin);
 
   useEffect(() => {
     dispatch(signin());
@@ -21,6 +21,7 @@ const Signin = () => {
 
   return (
     <main>
+      {isSignedIn && <Navigate to="/user/dashboard" />}
       {isLoading && <Spinner></Spinner>}
       <br /> <br /> <br />
       <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">

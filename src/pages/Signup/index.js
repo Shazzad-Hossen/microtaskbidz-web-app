@@ -1,7 +1,7 @@
 // import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -16,13 +16,14 @@ const Signup = () => {
   const [confpass, setConfpass] = useState("");
   const body = { name, email, password };
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.signup);
+  const { isLoading, isSignedUp } = useSelector((state) => state.signup);
   useEffect(() => {
     dispatch(signup());
   }, [dispatch]);
 
   return (
     <main>
+      {isSignedUp && <Navigate to="/user/signin" />}
       {isLoading && <Spinner></Spinner>}
       <br /> <br /> <br />
       <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">

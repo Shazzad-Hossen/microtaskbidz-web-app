@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../images/Logo.png";
 import menubaricon from "../../images/Menu Bar.png";
+import { signout } from "../../services/signin/signinSlice";
+
 const Navbar = () => {
+  const { isSignedIn } = useSelector((state) => state.signin);
   const [menu, setMEnu] = useState(false);
   const menuHandler = () => {
     if (menu) setMEnu(false);
     else setMEnu(true);
   };
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -19,21 +23,34 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/user/dashboard">Dashboard</Link>
-            </li>
+            {isSignedIn && (
+              <li>
+                <Link to="/user/dashboard">Dashboard</Link>
+              </li>
+            )}
             <li>
               <Link to="/bidz">Bidz</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="/user/signin">Sign In</Link>
-            </li>
-            <li>
-              <Link to="/user">Sign Up</Link>
-            </li>
+            {!isSignedIn && (
+              <li>
+                <Link to="/user/signin">Sign In</Link>
+              </li>
+            )}
+            {!isSignedIn && (
+              <li>
+                <Link to="/user">Sign Up</Link>
+              </li>
+            )}
+            {isSignedIn && (
+              <li>
+                <Link onClick={() => dispatch(signout())} to="/">
+                  Sign Out
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
         <button className="md:hidden" onClick={menuHandler}>
@@ -45,23 +62,37 @@ const Navbar = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/user/dashboard">Dashboard</Link>
-          </li>
+          {isSignedIn && (
+            <li>
+              <Link to="/user/dashboard">Dashboard</Link>
+            </li>
+          )}
           <li>
             <Link to="/bidz">Bidz</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/user/signin">Sign In</Link>
-          </li>
-          <li>
-            <Link to="/user">Sign Up</Link>
-          </li>
+          {!isSignedIn && (
+            <li>
+              <Link to="/user/signin">Sign In</Link>
+            </li>
+          )}
+          {!isSignedIn && (
+            <li>
+              <Link to="/user">Sign Up</Link>
+            </li>
+          )}
+          {isSignedIn && (
+            <li>
+              <Link onClick={() => dispatch(signout())} to="/">
+                Sign Out
+              </Link>
+            </li>
+          )}
         </ul>
       )}
+      <br /> <br /> <br />
     </div>
   );
 };
