@@ -3,18 +3,22 @@ import ButtonWhite from "../Button/ButtonWhite/ButtonWhite";
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import banner from "../../images/bidz.png";
+import { useSelector } from "react-redux";
 
-const Header = ({ text, isShow }) => {
+const Header = () => {
+  const { navText } = useSelector((state) => state);
+
   return (
     <div className="header-container">
       <Navbar></Navbar>
 
-      {isShow && (
+      {!navText.isHomeR && (
         <div className="mx-auto mb-16 max-w-xs border-4 border-white p-9 text-center text-5xl text-white">
-          {text}
+          {navText.value}
         </div>
       )}
-      {!isShow && (
+
+      {navText.isHomeR && (
         <div className="flex flex-col-reverse items-center justify-center  gap-10 text-white lg:flex-row">
           <div className="border-4  p-8">
             <h1 className="text-4xl font-bold">

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import logo from "../../images/Logo.png";
 import menubaricon from "../../images/Menu Bar.png";
-
 const Navbar = () => {
   const [menu, setMEnu] = useState(false);
   const menuHandler = () => {
@@ -16,22 +17,22 @@ const Navbar = () => {
         <div className=" hidden md:block">
           <ul className="flex gap-10 text-2xl font-semibold text-white">
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/user/dashboard">Dashboard</a>
+              <Link to="/user/dashboard">Dashboard</Link>
             </li>
             <li>
-              <a href="/bidz">Bidz</a>
+              <Link to="/bidz">Bidz</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/user/signin">Sign In</a>
+              <Link to="/user/signin">Sign In</Link>
             </li>
             <li>
-              <a href="/user">Sign Up</a>
+              <Link to="/user">Sign Up</Link>
             </li>
           </ul>
         </div>
@@ -42,22 +43,22 @@ const Navbar = () => {
       {menu && (
         <ul className="flex flex-col items-center justify-center gap-10 text-2xl font-semibold text-white">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/user/dashboard">Dashboard</a>
+            <Link to="/user/dashboard">Dashboard</Link>
           </li>
           <li>
-            <a href="/bidz">Bidz</a>
+            <Link to="/bidz">Bidz</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/user/signin">Sign In</a>
+            <Link to="/user/signin">Sign In</Link>
           </li>
           <li>
-            <a href="/user">Sign Up</a>
+            <Link to="/user">Sign Up</Link>
           </li>
         </ul>
       )}
