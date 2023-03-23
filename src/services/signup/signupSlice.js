@@ -12,7 +12,6 @@ export const signupUser = createAsyncThunk(
   "signup/signupUser",
   async (data) => {
     const res = await publicPost("contractor", data);
-    console.log(res);
     return res;
   }
 );

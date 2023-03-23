@@ -22,6 +22,10 @@ export const navSlice = createSlice({
       state.isHomeR = false;
       state.value = "Sign UP";
     },
+    resetpass: (state) => {
+      state.isHomeR = false;
+      state.value = "Reset Password";
+    },
     dboard: (state) => {
       state.isHomeR = false;
       state.value = "Dashboard";
@@ -33,6 +37,6 @@ export const navSlice = createSlice({
   },
 });
 
-export const { home, signin, signup, dboard } = navSlice.actions;
+export const { home, signin, signup, dboard, resetpass } = navSlice.actions;
 
 export default navSlice.reducer;

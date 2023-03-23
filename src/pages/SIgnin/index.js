@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Footer from "../../components/Footer/Footer";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
 import Spinner from "../../components/Spinner/Spinner";
-
 import { signinUser } from "../../services/signin/signinSlice";
 import { Link, Navigate } from "react-router-dom";
 import { signin } from "../../services/navtext/navtextSlice";

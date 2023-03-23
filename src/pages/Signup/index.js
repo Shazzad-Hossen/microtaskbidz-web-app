@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import Spinner from "../../components/Spinner/Spinner";
 import { signupUser } from "../../services/signup/signupSlice";
 import { signup } from "../../services/navtext/navtextSlice";
@@ -17,6 +15,7 @@ const Signup = () => {
   const body = { name, email, password };
   const dispatch = useDispatch();
   const { isLoading, isSignedUp } = useSelector((state) => state.signup);
+
   useEffect(() => {
     dispatch(signup());
   }, [dispatch]);
