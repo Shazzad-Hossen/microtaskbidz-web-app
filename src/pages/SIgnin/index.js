@@ -5,6 +5,7 @@ import Spinner from "../../components/Spinner/Spinner";
 import { signinUser } from "../../services/signin/signinSlice";
 import { Link, Navigate } from "react-router-dom";
 import { signin } from "../../services/navtext/navtextSlice";
+import { resetstate } from "../../services/signup/signupSlice";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -15,6 +16,7 @@ const Signin = () => {
 
   useEffect(() => {
     dispatch(signin());
+    dispatch(resetstate());
   }, [dispatch]);
 
   return (

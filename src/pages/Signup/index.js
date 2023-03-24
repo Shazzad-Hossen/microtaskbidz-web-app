@@ -1,4 +1,3 @@
-// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
@@ -12,17 +11,34 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confpass, setConfpass] = useState("");
-  const body = { name, email, password };
+  const body = { name, email, password, confpass };
   const dispatch = useDispatch();
-  const { isLoading, isSignedUp } = useSelector((state) => state.signup);
+  const { isLoading, isSignedUp, error } = useSelector((state) => state.signup);
 
   useEffect(() => {
     dispatch(signup());
   }, [dispatch]);
 
+  const err = {
+    nErr: false,
+    emErr: false,
+    passErr: false,
+    confPassErr: false,
+  };
+
+  error === "NAME_ERROR"
+    ? (err.nErr = true)
+    : error === "EMAIL_ERROR"
+    ? (err.emErr = true)
+    : error === "PASS_ERROR"
+    ? (err.passErr = true)
+    : error === "CONFPASS_ERROR"
+    ? (err.confPassErr = true)
+    : (err.confPassErr = false);
+
   return (
     <main>
-      {isSignedUp && <Navigate to="/user/signin" />}
+      {isSignedUp && <Navigate to="/user/signin"></Navigate>}
       {isLoading && <Spinner></Spinner>}
       <br /> <br /> <br />
       <div className=" mx-auto  max-w-3xl  rounded-xl bg-formbg">
@@ -39,6 +55,12 @@ const Signup = () => {
             id="name"
             value={name}
           />
+          {err.nErr && (
+            <p className="font-medium text-[#cc0303]">
+              name must be at least 5 charecter
+            </p>
+          )}
+          <br />
           <label className="text-xl font-semibold" htmlFor="email">
             Email
           </label>{" "}
@@ -51,6 +73,10 @@ const Signup = () => {
             id="email"
             value={email}
           />
+          {err.emErr && (
+            <p className="font-medium text-[#cc0303]">Invalid email address</p>
+          )}{" "}
+          <br />
           <label className="text-xl font-semibold" htmlFor="password">
             Password
           </label>{" "}
@@ -63,6 +89,12 @@ const Signup = () => {
             id="pass"
             value={password}
           />
+          {err.passErr && (
+            <p className="font-medium text-[#cc0303]">
+              password must be at least or more than 8 charecter
+            </p>
+          )}{" "}
+          <br />
           <label className="text-xl font-semibold" htmlFor="ConfirmPassword">
             Confirm Password
           </label>{" "}
@@ -75,6 +107,11 @@ const Signup = () => {
             id="confPass"
             value={confpass}
           />
+          {err.confPassErr && (
+            <p className="font-medium text-[#cc0303]">
+              Password doesn't matched
+            </p>
+          )}
           <br /> <br />
           <span>
             <ButtonPrimary

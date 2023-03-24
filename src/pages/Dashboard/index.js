@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import "./Dashboard.css";
 import dfPropic from "../../images/default pro pic.jpg";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";

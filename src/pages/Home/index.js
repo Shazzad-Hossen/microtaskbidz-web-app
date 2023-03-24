@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import ButtonBlack from "../../components/Button/ButtonBlack/ButtonBlack";
 import ButtonPrimary from "../../components/Button/ButtonPrimary/ButtonPrimary";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faQuoteLeft,
