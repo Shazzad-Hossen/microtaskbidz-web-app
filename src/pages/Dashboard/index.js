@@ -15,9 +15,9 @@ const Dashboard = () => {
 
   return (
     <main>
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row">
         {/* sidebar */}
-        <div className="w-[300px] bg-[#252525]  text-xl  text-[#cfcfcf]">
+        <div className=" w-[100%] bg-[#252525] text-xl  text-[#cfcfcf]  sm:w-[300px]">
           <ul className="sticky top-0">
             <li className="dli">Dashboard</li>
             <li className="dli">Profile</li>
@@ -30,14 +30,13 @@ const Dashboard = () => {
         <div className=" p-11">
           {/* profile */}
           <div className="">
-            <div className="flex gap-4  ">
+            <div className="flex flex-col ">
               <img className="propic" src={dfPropic} alt="" />
-              <span
-                className="flex flex-col
-                        justify-end"
-              >
+              <div>
+                {" "}
+                <br />
                 <ButtonPrimary text="Upload"></ButtonPrimary>
-              </span>
+              </div>
             </div>
 
             <br />
