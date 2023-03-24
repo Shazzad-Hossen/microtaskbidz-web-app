@@ -17,7 +17,9 @@ const Navbar = () => {
   return (
     <div>
       <div className=" mx-auto mb-40 flex max-w-7xl items-center justify-between">
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
         <div className=" hidden md:block">
           <ul className="flex gap-10 text-2xl font-semibold text-white">
             <li>
@@ -29,10 +31,10 @@ const Navbar = () => {
               </li>
             )}
             <li>
-              <Link to="/bidz">Bidz</Link>
+              <Link to="/">Bidz</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/">About</Link>
             </li>
             {!isSignedIn && (
               <li>
@@ -68,10 +70,10 @@ const Navbar = () => {
             </li>
           )}
           <li>
-            <Link to="/bidz">Bidz</Link>
+            <Link to="/">Bidz</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
           {!isSignedIn && (
             <li>
